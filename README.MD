@@ -22,4 +22,22 @@ Undocumented Codebase
 output: 
 Documented Codebase
 
-Importand: Dont clutter the code with unhelpfull comments. Just give clean and helpfull comments. 
+Importand: Dont clutter the code with unhelpfull comments. Just give clean and helpfull comments.
+
+## Installation
+
+```bash
+python3 -m venv env
+source env/bin/activate
+pip install -r requirements.txt
+cp .env.example .env
+# Edit .env and set OPENAI_API_KEY
+```
+
+## Usage
+
+Run the documentation agent on your codebase:
+
+```bash
+python -m document_agent_system.cli run /path/to/your/codebase --wiki-path ./wiki
+```
